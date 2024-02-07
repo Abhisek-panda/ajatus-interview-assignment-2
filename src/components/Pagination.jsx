@@ -10,7 +10,7 @@ const Pagination = () => {
     pages.push(i);
   }
   return (
-    <div className="flex gap-2 mt-4 ">
+    <div className="flex gap-2 mt-4 justify-center items-center ">
       {newUsers?.length === 0 ? (
         ""
       ) : (
