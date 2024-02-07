@@ -1,0 +1,2 @@
+# ajatus assignment
+ 
