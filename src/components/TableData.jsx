@@ -9,7 +9,7 @@ const TableData = () => {
         <h1> Nothing to Show</h1>
       ) : (
         <>
-          <table>
+          <table className="mx-4">
             <thead className="text-left">
               <tr>
                 <th className="">Id</th>

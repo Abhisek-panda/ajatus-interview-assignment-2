@@ -19,7 +19,9 @@ const Pagination = () => {
             return (
               <div key={index}>
                 <button
-                  className="border-2 rounded-sm border-sky-700 p-2 "
+                  className={`border-2 rounded-sm border-sky-700 px-4 py-1 ${
+                    pageData?.currentPage == page ? "bg-sky-700 text-white" : ""
+                  }`}
                   onClick={() =>
                     setPageData({ ...pageData, currentPage: page })
                   }

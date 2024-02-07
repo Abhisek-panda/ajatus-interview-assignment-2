@@ -35,7 +35,7 @@ const Navbar = () => {
         </select>
         <button
           onClick={filterRemoval}
-          className="border-sky-700 border-2 p-1 rounded-sm"
+          className="border-sky-700 border-2 p-1 rounded-sm hover:bg-sky-700 hover:text-white"
         >
           Clear Filters
         </button>

@@ -8,7 +8,7 @@ import Pagination from "./components/Pagination";
 
 const override = {
   display: "block",
-  margin: "0 auto",
+  margin: "250px auto",
   borderColor: "blue",
 };
 
@@ -32,7 +32,7 @@ function App() {
         loading={loading}
         cssOverride={override}
         size={50}
-        aria-label="Loading Spinner"
+        aria-label="Loading MoonLoader"
         data-testid="loader"
       />
     </>
