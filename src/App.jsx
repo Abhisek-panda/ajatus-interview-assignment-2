@@ -18,11 +18,11 @@ function App() {
   return (
     <>
       {loading === false ? (
-        <>
+        <div className="flex flex-col gap-2">
           <Navbar />
           <TableData />
           <Pagination />
-        </>
+        </div>
       ) : (
         ""
       )}
