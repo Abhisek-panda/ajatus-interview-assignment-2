@@ -18,7 +18,6 @@ export const DataProvider = ({ children }) => {
 
   const lastUserIndex = pageData?.currentPage * pageData?.usersPerPage;
   const firstUserIndex = lastUserIndex - pageData?.usersPerPage;
-  const currentUsers = users?.slice(firstUserIndex, lastUserIndex);
 
   useEffect(() => {
     const getData = async () => {
@@ -35,7 +34,7 @@ export const DataProvider = ({ children }) => {
   }, []);
 
   const filteredUsers = () => {
-    const newUsers = [...currentUsers];
+    const newUsers = [...users];
 
     const searchData =
       filters?.search !== ""
@@ -89,7 +88,8 @@ export const DataProvider = ({ children }) => {
         filteredUsers,
         pageData,
         setPageData,
-        currentUsers,
+        firstUserIndex,
+        lastUserIndex,
       }}
     >
       {children}

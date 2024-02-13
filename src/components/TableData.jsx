@@ -1,11 +1,12 @@
 import { useData } from "../main";
 
 const TableData = () => {
-  const { filteredUsers } = useData();
-  const newFilteredUsers = filteredUsers();
+  const { filteredUsers, firstUserIndex, lastUserIndex } = useData();
+  const usersFiltered = filteredUsers();
+  const slicedUsers = usersFiltered.slice(firstUserIndex, lastUserIndex);
   return (
     <>
-      {newFilteredUsers?.length === 0 ? (
+      {usersFiltered?.length === 0 ? (
         <h1> Nothing to Show</h1>
       ) : (
         <>
@@ -21,7 +22,7 @@ const TableData = () => {
                 <th>Height</th>
               </tr>
             </thead>
-            {newFilteredUsers?.map((user) => {
+            {slicedUsers?.map((user) => {
               return (
                 <tbody key={user?.id}>
                   <tr>
