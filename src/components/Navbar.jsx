@@ -7,21 +7,24 @@ const Navbar = () => {
     setPageData({ ...pageData, currentPage: 1 });
   };
   return (
-    <nav className="flex justify-center items-center gap-4 mt-2">
-      <h1 className="text-2xl text-sky-700 font-bold">Student Data</h1>
+    <nav className="flex justify-between items-center gap-4 mt-2">
       <div>
+        <h1 className="text-2xl text-sky-700 font-bold ml-10">Student Data</h1>
+      </div>
+      <div className="flex justify-center gap-10 mr-10 items-center">
         <input
           type="search"
           placeholder="Search With Name,University and Email"
           id=""
           name=""
           onChange={(e) => setFilters({ ...filters, search: e.target.value })}
-          className="w-96 border-2 border-black rounded-sm p-2"
+          className="w-96 border-2 border-black rounded-md p-2"
         />
         <select
           name=""
           id=""
           onChange={(e) => setFilters({ ...filters, sorting: e.target.value })}
+          className="border-black border-2 p-2 hover:border-sky-700 cursor-pointer hover:bg-sky-700 hover:text-white rounded-md"
         >
           <option value="" hidden>
             Sort By
@@ -35,7 +38,7 @@ const Navbar = () => {
         </select>
         <button
           onClick={filterRemoval}
-          className="border-sky-700 border-2 p-1 rounded-sm hover:bg-sky-700 hover:text-white"
+          className="border-sky-700 border-2 p-2 rounded-md hover:bg-sky-700 hover:text-white"
         >
           Clear Filters
         </button>
